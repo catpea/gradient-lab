@@ -1,12 +1,9 @@
 {
   "type": "module",
-
   "name": "gradient-lab",
   "description": "",
-  "version": "1.0.0",
-
+  "version": "1.0.1",
   "main": "index.js",
-
   "bin": {
     "odor": "server.js"
   },
@@ -14,7 +11,6 @@
     "start": "./server.js",
     "save": "git add .; git commit -m 'Updated Release'; npm version patch; npm publish; git push --follow-tags;"
   },
-
   "keywords": [
     "blog",
     "static-site",
@@ -22,7 +18,6 @@
     "workflow",
     "symbolic"
   ],
-
   "author": "catpea (https://github.com/catpea)",
   "license": "MIT",
   "repository": {
@@ -37,5 +32,4 @@
     "type": "github",
     "url": "https://github.com/sponsors/catpea"
   }
-
 }
