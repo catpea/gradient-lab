@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  Image Line Gradient Sampler
+  The visible body is intentionally a readable application tree of web components.
+  Every custom element extends ReactiveHTMLElement via GradientElement.
+-->
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Line Gradient Sampler</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./app.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "reactive-framework": "./reactive-framework.js",
+      "utils": "./utils.js",
+      "gradient-element": "./components/gradient-element.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <gradient-lab-app>
+    <app-shell>
+      <app-hero></app-hero>
+
+      <gradient-workbench>
+        <lux-card title="Image sampler" icon="bi-bounding-box-circles" subtitle="Draw on the image. Drag endpoint handles or tiny sample dots to reposition the sampling path.">
+          <sampler-toolbar></sampler-toolbar>
+          <image-sampling-stage></image-sampling-stage>
+          <sampled-gradient-list></sampled-gradient-list>
+        </lux-card>
+
+        <lux-card title="Gradient editor" icon="bi-sliders2" subtitle="Adjust stops, angles, and colors before adding the gradient to the class library.">
+          <gradient-editor></gradient-editor>
+        </lux-card>
+      </gradient-workbench>
+
+      <lux-card title="Gradient library" icon="bi-collection" subtitle="Curate chosen gradients into copyable class names.">
+        <library-controls></library-controls>
+        <gradient-library></gradient-library>
+        <library-code></library-code>
+      </lux-card>
+
+      <toast-zone></toast-zone>
+    </app-shell>
+  </gradient-lab-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

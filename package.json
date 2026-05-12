@@ -1,0 +1,41 @@
+{
+  "type": "module",
+
+  "name": "gradient-lab",
+  "description": "",
+  "version": "1.0.0",
+
+  "main": "index.js",
+
+  "bin": {
+    "odor": "server.js"
+  },
+  "scripts": {
+    "start": "./server.js",
+    "save": "git add .; git commit -m 'Updated Release'; npm version patch; npm publish; git push --follow-tags;"
+  },
+
+  "keywords": [
+    "blog",
+    "static-site",
+    "xml",
+    "workflow",
+    "symbolic"
+  ],
+
+  "author": "catpea (https://github.com/catpea)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catpea/odor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catpea/odor/issues"
+  },
+  "homepage": "https://catpea.github.io/odor",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/catpea"
+  }
+
+}
